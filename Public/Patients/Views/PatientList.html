@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="LastName">Alphabetical</option>
+        <option value="lastVisitDate">Last Visit</option>
+      </select>
+
+       <a type="button" href="#/patients/0" class="btn btn-lg" >New Patient</a>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+      <ul class="patients">
+        <li ng-repeat="patient in patients | orderBy:orderProp:reverse" class="patient-listing">
+          <p>Patient Name: <a href="#/patients/{{patient.PatientId}}">{{patient.FirstName}} {{patient.LastName}}</a></p>
+     
+   	 		<p>Patient Phone Number: {{patient.PhoneNo | tel}}</p>
+
+     		<p>Last Visit: {{patient.lastVisitDate | date}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
