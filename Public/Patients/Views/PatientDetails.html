@@ -1,18 +1,23 @@
 
 
-<div ng-controller="PatientListCtrl">
+<div ng-controller="PatientDetailCtrl">
 	<form name="myForm">
-     <p>First name: <input  name="FirstName" ng-pattern="/^[A-Z][a-z0-9_-]{3,19}$/" type="text" ng-model="patient.FirstName" required>
+
+     <p>First name: <input  name="FirstName" type="text" ng-model="patient.FirstName" required>
     <span class="error" ng-show="myForm.FirstName.$error.required">
       Required!</span></p>
 
-     <p>Last name: <input name="LastName" ng-pattern="/^[A-Z][a-z0-9_-]{3,19}$/" type="text" ng-model="patient.LastName" required>
+     <p>Last name: <input name="LastName" type="text" ng-model="patient.LastName" required>
      	<span class="error" ng-show="myForm.LastName.$error.required">
       Required!</span></p>
+
      <p>Patient Phone Number:  <input type="text" ng-model="patient.PhoneNo" ></p>
+
+
      <p>Last Visit: 	<input name="LastVisit" type="text" ng-model="patient.lastVisitDate" required>
      <span class="error" ng-show="myForm.LastVisit.$error.required">
       Required!</span></p>
+
      <p> Status 
 		<input type="radio" name="active" value="Active">  Active
 		<input type="radio" name="active" value="InActive">  InActive
@@ -22,7 +27,6 @@
     <input type="submit" ng-click="update(patient)" value="Save" />
 
 </form >
- </div>
-
-
+ </div><br>
  <a href="#/patients/">Go back</a>
+
