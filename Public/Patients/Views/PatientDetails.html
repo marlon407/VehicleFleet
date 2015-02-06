@@ -1,32 +1,66 @@
 
 
 <div ng-controller="PatientDetailCtrl">
-	<form name="myForm">
+<form class="form-horizontal" name="myForm" role="form">
+	<div class="form-group">	
+		<label ng-show="patient.PatientId" class="control-label" style="margin-left: 2%;" ><h3> Editing Patient:  {{patient.FirstName}} </h3></label>
+		<label ng-show="!patient.PatientId" class="control-label " > <h3>Create new patient </h3></label>
+		
+		<a class="btn btn-default" style="margin-left:10%" href="#/patients/">See all patients</a>
+	</div>
 
-     <p>First name: <input  name="FirstName" type="text" ng-model="patient.FirstName" required>
-    <span class="error" ng-show="myForm.FirstName.$error.required">
-      Required!</span></p>
+	<div class="form-group">
+		<label class="control-label col-sm-3" for="PatientId">Patient code:</label>
+		<div class="col-sm-9">
+			<input  name="FirstName" class="form-control" type="text" ng-model="patient.PatientId" readonly>
+	  	</div>
+	</div>
 
-     <p>Last name: <input name="LastName" type="text" ng-model="patient.LastName" required>
-     	<span class="error" ng-show="myForm.LastName.$error.required">
-      Required!</span></p>
+	<div class="form-group">
+		<label class="control-label col-sm-3" for="firstName">First Name:</label>
+		<div class="col-sm-9">
+			<input  name="FirstName" class="form-control" type="text" ng-model="patient.FirstName" required>
+	  	</div>
+	</div>
 
-     <p>Patient Phone Number:  <input type="text" ng-model="patient.PhoneNo" ></p>
 
+	<div class="form-group">
+		<label class="control-label col-sm-3" for="lastName">Last Name:</label>
+		<div class="col-sm-9">
+			<input  name="LastName" class="form-control" type="text" ng-model="patient.LastName" required>
+	  	</div>
+	</div>
 
-     <p>Last Visit: 	<input name="LastVisit" type="text" ng-model="patient.lastVisitDate" required>
-     <span class="error" ng-show="myForm.LastVisit.$error.required">
-      Required!</span></p>
+	<div class="form-group">
+		<label class="control-label col-sm-3" for="firstName">Phone Number:</label>
+		<div class="col-sm-9">
+			<input  name="PhoneNo" class="form-control" type="text" ng-model="patient.PhoneNo">
+	    	
+	  	</div>
+	</div>
 
-     <p> Status 
-		<input type="radio" name="active" value="Active">  Active
-		<input type="radio" name="active" value="InActive">  InActive
-	</p>
+	<div class="form-group">
+		<label class="control-label col-sm-3" for="lastName">Date of Last Visit:</label>
+		<div class="col-sm-9">
+			<input  name="lastVisitDate" class="form-control" type="text" ng-model="patient.lastVisitDate" required>
+	  	</div>
+	</div>
 
-     <input type="button" ng-click="reset()" value="Reset" />
-    <input type="submit" ng-click="update(patient)" value="Save" />
+	<div class="form-group"> 
+		<label class="control-label col-sm-3" for="status">Status:</label>
+    	<div class=" col-sm-9" style="margin-top:5px">
+        		<label><input type="radio" checked> Active   </label>
+        		<label><input type="radio"> Inactive</label>
+    	</div>
+  	</div>
 
-</form >
- </div><br>
- <a href="#/patients/">Go back</a>
+  	<div class="form-group"> 
+    	<div class="col-sm-offset-3 col-sm-9">
+      		<button type="submit" ng-click="update(patient)" class="btn btn-default">Submit</button>
+      		<button type="button" ng-click="reset()" class="btn btn-default">Reset</button>
+    	</div>
+  	</div>
+</form ></div>
+ <br>
+
 

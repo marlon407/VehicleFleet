@@ -1,20 +1,25 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-2">
-      <!--Sidebar content-->
-
-      Sort by:
-      <select ng-model="orderProp">
-        <option value="LastName">Alphabetical</option>
-        <option value="lastVisitDate">Last Visit</option>
-      </select>
-
-       <a type="button" href="#/patients/0" class="btn btn-lg" >New Patient</a>
-
+    <div class="col-md-2" style="margin-top:4%">
+		<ul class="nav nav-pills nav-stacked">
+	        
+	        <li><a href="#/patients/0">New Patient</a></li>
+	        <li><a href="#">Future Action 1</a></li>
+	        <li><a href="#"> Future Action 2</a></li>
+     	</ul>
+      
     </div>
-    <div class="col-md-10">
+    <div class="col-md-8">
       <!--Body content-->
       <ul class="patients">
+  		<div class="selectOrder">
+  			<label class="col-sm-7">List of all Patients</label>
+      		<label class="col-sm-2">Sort by: </label>
+  			<select ng-model="orderProp" id="mySel" class="form-control">
+		        <option value="LastName">Alphabetical</option>
+		    	<option value="lastVisitDate">Last Visit</option>
+		    </select>
+		</div>
         <li ng-repeat="patient in patients | orderBy:orderProp:reverse" class="patient-listing">
           <p>Patient Name: <a href="#/patients/{{patient.PatientId}}">{{patient.FirstName}} {{patient.LastName}}</a></p>
      

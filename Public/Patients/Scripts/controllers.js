@@ -49,8 +49,8 @@ patientControllers.controller('PatientListCtrl', ['$scope','$http', function($sc
   	 $scope.patients = GetArray();
   }]);
 
-patientControllers.controller('PatientDetailCtrl', ['$scope', '$routeParams',
-  function($scope, $routeParams) {
+patientControllers.controller('PatientDetailCtrl', ['$window', '$scope', '$routeParams',
+  function($window,$scope, $routeParams) {
     
 	$scope.patient = getById($routeParams.PatientId);
 
@@ -70,7 +70,7 @@ patientControllers.controller('PatientDetailCtrl', ['$scope', '$routeParams',
 	    	tempPatient.lastVisitDate = patient.lastVisitDate;
 	    	tempPatient.PhoneNo = patient.PhoneNo;
 	    }
-	    this.patient = {};
+	    $window.alert("Successful operation");
       };
 
 

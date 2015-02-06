@@ -8,56 +8,48 @@ body {
   list-style: none;
 }
 
-.thumb {
-  float: left;
-  margin: -0.5em 1em 1.5em 0;
-  padding-bottom: 1em;
-  height: 100px;
-  width: 100px;
-}
-
 .patients li {
   clear: both;
   height: 115px;
   padding-top: 15px;
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 5px;
+  margin-bottom: 4px;
+  border-radius: 10px;
 }
 
-
-ul.patient-thumbs {
-  margin: 0;
-  list-style: none;
+.patients label {
+  margin-top: 8px;
 }
 
-ul.patient-thumbs li {
-  border: 1px solid black;
-  display: inline-block;
-  margin: 1em;
-  background-color: white;
-}
-
-
-ul.specs {
-  clear: both;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-ul.specs > li{
-  display: inline-block;
-  width: 200px;
-  vertical-align: top;
-}
-
-ul.specs > li > span{
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-ul.specs dt {
-  font-weight: bold;
+.patients .col-sm-2{
+  width: 12%;
 }
 
 h1 {
   border-bottom: 1px solid gray;
+}
+
+
+.form-control {
+  width: 200px;
+}
+
+.selectOrder{
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-bottom: 3px;
+}
+
+.form-horizontal{
+  margin-left: 30%;
+  margin-right: 25%;
+  margin-top: 5%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
