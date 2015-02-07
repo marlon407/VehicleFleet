@@ -3,10 +3,12 @@
 /* App Module */
 
 var app = angular.module('Patient', [
-  'ngRoute',
-  'patientControllers'
+  'ngRoute',//routes
+  'patientControllers'//Adding the controllers
 ]);
 
+//Providing routes for the whole applicarion so far
+//I am not using Express at this point.
 app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.

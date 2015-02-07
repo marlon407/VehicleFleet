@@ -4,22 +4,27 @@
 
 var patientControllers = angular.module('patientControllers', []);
 
-var wholeData = [];
+var wholeData = [];//Array that simulates my database
+
+//Set the list of patients into the array
 var setArray = function(data)
 {
 	wholeData = data;
 };
 
+//Returns all patients into the array
 var GetArray = function()
 {
 	return wholeData;
 }
 
+//Add a new Patient int my array of patients
 var AddNewObj = function(patient)
 {
 	wholeData.push(patient);
 }
 
+//From the array of patients, get a specific patients by the PatientId
 var getById = function(id) {
 	var arr = GetArray();
 	for (var d = 0; d < arr.length; d += 1) {
@@ -29,6 +34,8 @@ var getById = function(id) {
 	}
 }
 
+//Returns the biggest PatientId number from that array of patients 
+//to set as PatientId to a new patient
 var findMaxId = function(){
 	var maxid = 0;
 	GetArray().map(function(obj){     
@@ -37,9 +44,12 @@ var findMaxId = function(){
 	return maxid;
 }
 
+//Controller for Patientlist
 patientControllers.controller('PatientListCtrl', ['$scope','$http', function($scope, $http){
-    $scope.orderProp = 'LastName';
-  	if(GetArray().length == 0){
+    $scope.orderProp = 'LastName';//Set the property for sort
+  	//If there is nothing  into the array, get from Patient.Json,
+    //otherwise get from my parient's array
+    if(GetArray().length == 0){
   	$http.get('Data/Patient.json').success(function(data){
         $scope.patients = data;
         setArray(data);
@@ -49,14 +59,17 @@ patientControllers.controller('PatientListCtrl', ['$scope','$http', function($sc
   	 $scope.patients = GetArray();
   }]);
 
+//Controller for PatientDetail
 patientControllers.controller('PatientDetailCtrl', ['$window', '$scope', '$routeParams',
   function($window,$scope, $routeParams) {
-    
-	$scope.patient = getById($routeParams.PatientId);
-
+  //Get a specific Patient 
+    $scope.patient = getById($routeParams.PatientId);
+  //Reset the form
     $scope.reset = function(){
   		this.patient = {};
-  	}
+    }
+
+    //Save a new Patient or update when editing
     $scope.update = function(patient) {
     	if(patient.PatientId == undefined){
 	    	patient.PatientId = findMaxId() + 1;
@@ -73,12 +86,10 @@ patientControllers.controller('PatientDetailCtrl', ['$window', '$scope', '$route
 	    $window.alert("Successful operation");
       };
 
-
-
   }]);
 
 
-
+//Filter for phone number
 patientControllers.filter('tel', function () {
     return function (tel) {
         if (!tel) { return ''; }
