@@ -38,6 +38,7 @@ fleetCarService.factory("carFactory", function(){
 			return wholeData;
 			
 		},
+		// Get a specific vehicle by the plate
 		getById: function(plate){
 			var arr = wholeData;
 			for (var d = 0; d < arr.length; d += 1) {
@@ -46,6 +47,7 @@ fleetCarService.factory("carFactory", function(){
 				}	
 			}
 		},
+		//If the vehicle has no image, upload it from json file
 		selectBrandImg: function(brand, brands){
 			for (var b = 0; b < brands.length; b += 1) {
 				if(brands[b].name == brand){

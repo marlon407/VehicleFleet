@@ -3,8 +3,8 @@
 /* Controllers */
 var fleetCarControllers = angular.module('CarFleetControllers', []);
 
+/* List of Vehicles' controller */
 fleetCarControllers.controller('FleetListCtrl', ['$scope','$http', 'carFactory', function($scope, $http, carFactory){
-    $scope.orderProp = 'modelo';//Set the property for sort
 		$scope.currentPage = 0;
     $scope.pageSize = 3;
 		$scope.fleetList = [];
@@ -24,9 +24,9 @@ fleetCarControllers.controller('FleetListCtrl', ['$scope','$http', 'carFactory',
 		}
   }]);
 
+/* Vehicles' detail controller */
 fleetCarControllers.controller('CarDetailCtrl', ['$window', '$scope', '$http', '$routeParams', 'carFactory',
   function($window, $scope, $http, $routeParams, carFactory) {
-  	//Get a specific Patient 
 		$scope.car = carFactory.getById($routeParams.plate);
 		
 		$scope.delete = function(car){
@@ -38,6 +38,7 @@ fleetCarControllers.controller('CarDetailCtrl', ['$window', '$scope', '$http', '
 		}
   }]);
 
+/* Create and Update controller */
 fleetCarControllers.controller('NewCarlCtrl', ['$window', '$scope','$http', '$routeParams', 'carFactory',
   function($window, $scope, $http, $routeParams, carFactory) {
 		$scope.brands = []
@@ -52,6 +53,7 @@ fleetCarControllers.controller('NewCarlCtrl', ['$window', '$scope','$http', '$ro
 		
 		$scope.newTemplate = "Views/_carTemplate.html" 
 		
+		//Verify if there is an image uploaded, if not, load from the images json file.
 		var valideteImg = function(car){
 			if (car.image === "" || car.image === undefined){
 				car.image = carFactory.selectBrandImg(car.brand, $scope.brands);

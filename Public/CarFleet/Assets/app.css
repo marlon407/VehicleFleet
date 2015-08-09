@@ -22,7 +22,7 @@
 	padding: 10px;
 }
 
-/*List*/
+/*List of Vehicles*/
 .fleet .prev-next-btn{
 	padding: 10px;
 }
@@ -73,7 +73,7 @@
 .fleet .hover-link a:hover{
 	color: #008CBA;
 }
-
+/*Vehicle detail*/
 .car-detail .columns{
 	padding: 0;
 }
