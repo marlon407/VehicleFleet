@@ -1,0 +1,49 @@
+<div class="car-detail">
+	<h1 class="text-center">Detalhe do Veículo</h1>
+	<div class="row">
+		<div class="small-3 columns">
+			<span class="prefix">Marca</span>
+		</div>
+		<div class="small-9 columns">
+			<input readonly type="text" ng-model="car.brand">
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-3 columns">
+			<span class="prefix">Modelo</span>
+		</div>
+		<div class="small-9 columns">
+			<input disabled type="text" ng-model="car.model">
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-3 columns">
+			<span class="prefix">Cor</span>
+		</div>
+		<div class="small-9 columns">
+			<input disabled type="text" ng-model="car.color">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="small-3 columns">
+			<span class="prefix">Combustivel</span>
+		</div>
+		<div class="small-9 columns">
+			<input disabled type="text" ng-model="car.fuel">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="small-3 columns">
+			<span class="prefix">Placa</span>
+		</div>
+		<div class="small-9 columns">
+			<input disabled type="text" ng-model="car.plate">
+		</div>
+	</div>
+	<div class="row">
+		<a href="#/fleet/update/{{car.plate}}" class="button">Atualizar dados</a>
+		<a href="" ng-click="delete(car)" class="button alert right">Excluir</a>
+	</div>
+</div>

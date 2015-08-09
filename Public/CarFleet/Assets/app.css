@@ -1,0 +1,80 @@
+.fleet , .car-detail, .car-new{
+	max-width: 900px;
+	width: auto;
+	margin: auto;
+	padding-top: 40px;
+	padding: 20px;
+}
+
+/*Seach input - filter boxes*/
+.seach-box{
+	margin-bottom: 20px;
+}
+
+.seach-box input{
+	height: 80%;
+	width: 100%;
+	border-radius: 3px;
+	outline: none;
+	box-shadow: none;
+	border: 1px solid lightgrey;
+	font-size: 15px;
+	padding: 10px;
+}
+
+/*List*/
+.fleet .prev-next-btn{
+	padding: 10px;
+}
+
+.fleet .car{
+	text-align: center;
+	position: relative;
+}
+
+.fleet .car .car-preview{
+	list-style: none;
+	border: 1px solid;
+	border-radius: 3px;
+}
+
+.update, .details{
+	width: 50%;
+	float: left;
+	padding-top: 40px;
+}
+
+.fleet .car .car-preview .image-car{
+	padding: 0;
+}
+
+.fleet .car .car-preview .image-car img{
+	height: 200px;
+}
+
+.fleet .hover-link{
+	position: absolute;
+	opacity: 0;
+	background: rgba(42,59,77,0.9);
+	height: 200px;
+	text-align: center;
+	cursor: auto;
+	width: 93%;
+}
+
+.fleet .hover-link:hover{
+	opacity: 1;
+}
+
+.fleet .hover-link a{
+	color: white;
+}
+
+.fleet .hover-link a:hover{
+	color: #008CBA;
+}
+
+.car-detail .columns{
+	padding: 0;
+}
+

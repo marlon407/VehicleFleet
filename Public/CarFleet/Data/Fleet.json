@@ -1,0 +1,52 @@
+[ 
+	{ 
+		"fuel" : "Flex",
+		"image": "http://autos.vocedeolhoemtudo.com.br/wp-content/gallery/fusca/fusca-1.jpg",
+		"brand" : "Volkswagem",
+		"model" : "Gol",
+		"plate" : "FFF5498",
+		"color": "Branco"
+	},
+	{ 
+		"fuel" : "Gasolina",
+		"image": "http://autos.vocedeolhoemtudo.com.br/wp-content/gallery/fusca/fusca-1.jpg",
+		"brand" : "Volkswagem",
+		"model" : "Fox",
+		"plate" : "FOX4125",
+		"color": "Branco"
+	},
+	
+	{ 
+		"fuel" : "Alcool",
+		"image": "http://autos.vocedeolhoemtudo.com.br/wp-content/gallery/fusca/fusca-1.jpg",
+		"brand" : "Volkswagen",
+		"model" : "Fusca",
+		"plate" : "PAI4121",
+		"color": "Branco"
+	},
+		{ 
+		"fuel" : "Gas",
+		"image": "http://novocarrobr.com.br/wp-content/uploads/2014/12/renault-logan-20151.jpg",
+		"brand" : "Renaut",
+		"model" : "Loagn",
+		"plate" : "AAA1111",
+		"color": "Marron"
+	},
+	{ 
+		"fuel" : "Gasolina",
+		"image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQHg5ZkNMBHBMYNXz0vLgdajxs6T8A9zbig8efhQ6SF3IM27nAcGw",
+		"brand" : "Volkswagem",
+		"model" : "Fox",
+		"plate" : "BBB3333",
+		"color": "Vermelho"
+	},
+	
+	{ 
+		"fuel" : "Alcool",
+		"image": "http://autos.vocedeolhoemtudo.com.br/wp-content/gallery/fusca/fusca-1.jpg",
+		"brand" : "Volkswagen",
+		"model" : "Fusca",
+		"plate" : "PAI4121",
+		"color": "Branco"
+	}
+]

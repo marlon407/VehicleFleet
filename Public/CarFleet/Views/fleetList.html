@@ -1,0 +1,26 @@
+  <div class="fleet">
+		<h1 class="text-center">Lista da frota</h1>
+		
+		<div class="row seach-box large-collapse">
+			<div class="large-6 medium-6 small-6 columns"><input placeholder="Busque por marca" ng-model="search.brand"></div>
+			<div class="large-6 medium-6 small-6 columns"><input placeholder="Busque por cor" ng-model="search.color"></div>
+		</div>
+		
+		<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-2">
+			<li ng-repeat="car in fleetList | filter:search | startFrom:currentPage*pageSize | limitTo:pageSize" class="car" id="easyPaginate">
+				<div class="car-preview row">
+					<div class="image-car large-12 columns"><img src="{{car.image}}"></div>
+					<div class="hover-link">
+						<div class="update"><a href="#/fleet/update/{{car.plate}}"><img src="/Assets/images/update.png"><br>Atualizar</a></div>
+						<div class="details"><a href="#/fleet/{{car.plate}}"><img src="/Assets/images/detail.png"><br>Visualizar</a></div>
+					</div>
+					<div class="image-car large-12 columns"><span>{{car.brand}} - {{car.model}}</span></div>
+				</div>
+			</li>
+		</ul>
+		<div class="text-center" ng-show="numberOfPages() > 1">
+			<button class="prev-next-btn" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><</button>
+			{{currentPage+1}} de {{numberOfPages()}}
+			<button class="prev-next-btn" ng-disabled="currentPage >= fleetList.length/pageSize - 1" ng-click="currentPage=currentPage+1">></button>
+		</div>
+	</div>
