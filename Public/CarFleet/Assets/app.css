@@ -78,3 +78,16 @@
 	padding: 0;
 }
 
+.car-detail .image_details {
+	margin-bottom: 20px;
+	max-width: 200px;
+}
+
+/*Upload and Create vehicle*/
+.car-new .capitalized{
+	text-transform: capitalize;
+}
+
+.car-new .upper{
+	text-transform: uppercase;
+}

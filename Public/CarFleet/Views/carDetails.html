@@ -1,5 +1,11 @@
 <div class="car-detail">
 	<h1 class="text-center">Detalhe do Veículo</h1>
+	
+	<div class="row">
+		<div class="large-4 large-push-5 medium-push-5 columns image_details">
+			<img src="{{car.image}}">
+		</div>
+	</div>
 	<div class="row">
 		<div class="small-3 columns">
 			<span class="prefix">Marca</span>
@@ -42,6 +48,7 @@
 			<input disabled type="text" ng-model="car.plate">
 		</div>
 	</div>
+	
 	<div class="row">
 		<a href="#/fleet/update/{{car.plate}}" class="button">Atualizar dados</a>
 		<a href="" ng-click="delete(car)" class="button alert right">Excluir</a>

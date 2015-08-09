@@ -1,9 +1,27 @@
-	<div class="row collapse">
+<div class="row collapse">
+	<div class="small-3 large-2 columns">
+		<span class="prefix">Placa</span>
+	</div>
+	<div class="small-9 large-10 columns">
+		<input class="upper" required type="text" ng-model="car.plate" pattern="[A-Za-z]{3}-[0-9]{4}">
+	</div>
+</div>
+
+ <div class="row collapse">
+	<div class="small-3 large-2 columns">
+		<span class="prefix">Imagem</span>
+	</div>
+	<div class="small-9 large-10 columns">
+		<input type="text" placeholder="Coloque aqui o link da sua imagem" ng-model="car.image">
+	</div>
+</div>
+
+<div class="row collapse">
 		<div class="small-3 large-2 columns">
 			<span class="prefix">Marca</span>
 		</div>
 		<div class="small-9 large-10 columns">
-			<select ng-model="car.brand" ng-options="brand.name as brand.name for brand in brands">
+			<select ng-model="car.brand" ng-options="brand.name as brand.name for brand in brands" required>
 				<option value="">{{car.brand}}</option>
 			</select>
 		</div>
@@ -13,7 +31,7 @@
 			<span class="prefix">Modelo</span>
 		</div>
 		<div class="small-9 large-10 columns">
-			<input required type="text" ng-model="car.model">
+			<input class="capitalized" required type="text" ng-model="car.model">
 		</div>
 	</div>
 	<div class="row collapse">
@@ -21,7 +39,7 @@
 			<span class="prefix">Cor</span>
 		</div>
 		<div class="small-9 large-10 columns">
-			<input required type="text" ng-model="car.color">
+			<input class="capitalized" required type="text" ng-model="car.color">
 		</div>
 	</div>
 	
@@ -30,24 +48,10 @@
 			<span class="prefix">Combustivel</span>
 		</div>
 		<div class="small-9 large-10 columns">
-			<input type="text" ng-model="car.fuel">
+			<select ng-model="car.fuel">
+				<option>Gasolina</option>
+				<option>Álcool</option>
+				<option>Flex</option>
+			</select>
 		</div>
 	</div>
-	
-	<div class="row collapse">
-		<div class="small-3 large-2 columns">
-			<span class="prefix">Placa</span>
-		</div>
-		<div class="small-9 large-10 columns">
-			<input required type="text" ng-model="car.plate">
-		</div>
-	</div>
-	
-	 <div class="row collapse">
-    <div class="small-3 large-2 columns">
-      <span class="prefix">http://</span>
-    </div>
-    <div class="small-9 large-10 columns">
-      <input type="text" ng-model="car.image">
-    </div>
-  </div>
