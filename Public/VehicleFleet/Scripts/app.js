@@ -2,10 +2,10 @@
 
 /* App Module */
 
-var app = angular.module('FleetCar', [
+var app = angular.module('VehicleFleet', [
   'ngRoute',//routes
-  'CarFleetControllers',//Adding the controllers
-	'fleetCarService',
+  'vehicleFleetControllers',//Adding the controllers
+	'fleetVehicleService',
 	'fleetFilters'
 ]);
 
@@ -19,16 +19,16 @@ app.config(['$routeProvider',
         controller: 'FleetListCtrl'
       }).
 			when('/fleet/new', {
-        templateUrl: 'Views/newCar.html',
-        controller: 'NewCarlCtrl'
+        templateUrl: 'Views/newVehicle.html',
+        controller: 'NewVehicleCtrl'
       }).
       when('/fleet/update/:plate', {
-        templateUrl: 'Views/updateCar.html',
-        controller: 'NewCarlCtrl'
+        templateUrl: 'Views/updateVehicle.html',
+        controller: 'NewVehicleCtrl'
       }).
       when('/fleet/:plate', {
-        templateUrl: 'Views/carDetails.html',
-        controller: 'CarDetailCtrl'
+        templateUrl: 'Views/vehicleDetails.html',
+        controller: 'VehicleDetailCtrl'
       }).
       when('/home', {
         templateUrl: 'Views/home.html'

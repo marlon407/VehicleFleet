@@ -3,7 +3,7 @@
 		<span class="prefix">Placa</span>
 	</div>
 	<div class="small-9 large-10 columns">
-		<input class="upper" required type="text" ng-model="car.plate" pattern="[A-Za-z]{3}-[0-9]{4}">
+		<input class="upper" required type="text" ng-model="vehicle.plate" pattern="[A-Za-z]{3}-[0-9]{4}">
 	</div>
 </div>
 
@@ -12,7 +12,7 @@
 		<span class="prefix">Imagem</span>
 	</div>
 	<div class="small-9 large-10 columns">
-		<input type="text" placeholder="Coloque aqui o link da sua imagem" ng-model="car.image">
+		<input type="text" placeholder="Coloque aqui o link da sua imagem" ng-model="vehicle.image">
 	</div>
 </div>
 
@@ -21,8 +21,8 @@
 			<span class="prefix">Marca</span>
 		</div>
 		<div class="small-9 large-10 columns">
-			<select ng-model="car.brand" ng-options="brand.name as brand.name for brand in brands" required>
-				<option value="">{{car.brand}}</option>
+			<select ng-model="vehicle.brand" ng-options="brand.name as brand.name for brand in brands" required>
+				<option value="">{{vehicle.brand}}</option>
 			</select>
 		</div>
 	</div>
@@ -31,7 +31,7 @@
 			<span class="prefix">Modelo</span>
 		</div>
 		<div class="small-9 large-10 columns">
-			<input class="capitalized" required type="text" ng-model="car.model">
+			<input class="capitalized" required type="text" ng-model="vehicle.model">
 		</div>
 	</div>
 	<div class="row collapse">
@@ -39,7 +39,7 @@
 			<span class="prefix">Cor</span>
 		</div>
 		<div class="small-9 large-10 columns">
-			<input class="capitalized" required type="text" ng-model="car.color">
+			<input class="capitalized" required type="text" ng-model="vehicle.color">
 		</div>
 	</div>
 	
@@ -48,7 +48,7 @@
 			<span class="prefix">Combustivel</span>
 		</div>
 		<div class="small-9 large-10 columns">
-			<select ng-model="car.fuel">
+			<select ng-model="vehicle.fuel">
 				<option>Gasolina</option>
 				<option>Álcool</option>
 				<option>Flex</option>

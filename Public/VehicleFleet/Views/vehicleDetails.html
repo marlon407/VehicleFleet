@@ -1,9 +1,9 @@
-<div class="car-detail">
+<div class="vehicle-detail">
 	<h1 class="text-center">Detalhe do Veículo</h1>
 	
 	<div class="row">
 		<div class="large-4 large-push-5 medium-push-5 columns image_details">
-			<img src="{{car.image}}">
+			<img src="{{vehicle.image}}">
 		</div>
 	</div>
 	<div class="row">
@@ -11,7 +11,7 @@
 			<span class="prefix">Marca</span>
 		</div>
 		<div class="small-9 columns">
-			<input readonly type="text" ng-model="car.brand">
+			<input readonly type="text" ng-model="vehicle.brand">
 		</div>
 	</div>
 	<div class="row">
@@ -19,7 +19,7 @@
 			<span class="prefix">Modelo</span>
 		</div>
 		<div class="small-9 columns">
-			<input disabled type="text" ng-model="car.model">
+			<input disabled type="text" ng-model="vehicle.model">
 		</div>
 	</div>
 	<div class="row">
@@ -27,7 +27,7 @@
 			<span class="prefix">Cor</span>
 		</div>
 		<div class="small-9 columns">
-			<input disabled type="text" ng-model="car.color">
+			<input disabled type="text" ng-model="vehicle.color">
 		</div>
 	</div>
 	
@@ -36,7 +36,7 @@
 			<span class="prefix">Combustivel</span>
 		</div>
 		<div class="small-9 columns">
-			<input disabled type="text" ng-model="car.fuel">
+			<input disabled type="text" ng-model="vehicle.fuel">
 		</div>
 	</div>
 	
@@ -45,12 +45,12 @@
 			<span class="prefix">Placa</span>
 		</div>
 		<div class="small-9 columns">
-			<input disabled type="text" ng-model="car.plate">
+			<input disabled type="text" ng-model="vehicle.plate">
 		</div>
 	</div>
 	
 	<div class="row">
-		<a href="#/fleet/update/{{car.plate}}" class="button">Atualizar dados</a>
-		<a href="" ng-click="delete(car)" class="button alert right">Excluir</a>
+		<a href="#/fleet/update/{{vehicle.plate}}" class="button">Atualizar dados</a>
+		<a href="" ng-click="delete(vehicle)" class="button alert right">Excluir</a>
 	</div>
 </div>

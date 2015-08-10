@@ -1,4 +1,4 @@
-.fleet , .car-detail, .car-new{
+.fleet , .vehicle-detail, .vehicle-new{
 	max-width: 900px;
 	width: auto;
 	margin: auto;
@@ -27,12 +27,12 @@
 	padding: 10px;
 }
 
-.fleet .car{
+.fleet .vehicle{
 	text-align: center;
 	position: relative;
 }
 
-.fleet .car .car-preview{
+.fleet .vehicle .vehicle-preview{
 	list-style: none;
 	border: 1px solid;
 	border-radius: 3px;
@@ -44,11 +44,11 @@
 	padding-top: 40px;
 }
 
-.fleet .car .car-preview .image-car{
+.fleet .vehicle .vehicle-preview .image-vehicle{
 	padding: 0;
 }
 
-.fleet .car .car-preview .image-car img{
+.fleet .vehicle .vehicle-preview .image-vehicle img{
 	height: 200px;
 }
 
@@ -74,20 +74,20 @@
 	color: #008CBA;
 }
 /*Vehicle detail*/
-.car-detail .columns{
+.vehicle-detail .columns{
 	padding: 0;
 }
 
-.car-detail .image_details {
+.vehicle-detail .image_details {
 	margin-bottom: 20px;
 	max-width: 200px;
 }
 
 /*Upload and Create vehicle*/
-.car-new .capitalized{
+.vehicle-new .capitalized{
 	text-transform: capitalize;
 }
 
-.car-new .upper{
+.vehicle-new .upper{
 	text-transform: uppercase;
 }

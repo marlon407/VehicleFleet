@@ -1,9 +1,9 @@
 {
   "version": "0.0.0",
   "private": true,
-  "name": "CarFleetCRUD",
-  "description": "A CRUD for car fleet",
-  "repository": "",
+  "name": "VehicleFleetCRUD",
+  "description": "A CRUD for vehicle fleet",
+  "repository": "https://github.com/marlon407/VehicleFleet",
   "license": "",
   "devDependencies": {
     "http-server": "^0.6.1",

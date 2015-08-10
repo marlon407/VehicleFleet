@@ -6,3 +6,4 @@
 
 # Ignore 
 /node_modules
+/spec

@@ -1,20 +1,20 @@
   <div class="fleet">
 		<h1 class="text-center">Lista da frota</h1>
 		
-		<div class="row seach-box large-collapse">
+		<div class="row seach-box large-collapse medium-collapse small-collapse">
 			<div class="large-6 medium-6 small-6 columns"><input placeholder="Busque por marca" ng-model="search.brand"></div>
 			<div class="large-6 medium-6 small-6 columns"><input placeholder="Busque por cor" ng-model="search.color"></div>
 		</div>
 		
 		<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-2">
-			<li ng-repeat="car in fleetList | filter:search | startFrom:currentPage*pageSize | limitTo:pageSize" class="car" id="easyPaginate">
-				<div class="car-preview row">
-					<div class="image-car large-12 columns"><img src="{{car.image}}"></div>
+			<li ng-repeat="vehicle in fleetList | filter:search | startFrom:currentPage*pageSize | limitTo:pageSize" class="vehicle" id="easyPaginate">
+				<div class="vehicle-preview row">
+					<div class="image-vehicle large-12 columns"><img src="{{vehicle.image}}"></div>
 					<div class="hover-link">
-						<div class="update"><a href="#/fleet/update/{{car.plate}}"><img src="/Assets/images/update.png"><br>Atualizar</a></div>
-						<div class="details"><a href="#/fleet/{{car.plate}}"><img src="/Assets/images/detail.png"><br>Visualizar</a></div>
+						<div class="update"><a href="#/fleet/update/{{vehicle.plate}}"><img src="/Assets/images/update.png"><br>Atualizar</a></div>
+						<div class="details"><a href="#/fleet/{{vehicle.plate}}"><img src="/Assets/images/detail.png"><br>Visualizar</a></div>
 					</div>
-					<div class="image-car large-12 columns"><span>{{car.brand}} - {{car.model}}</span></div>
+					<div class="image-vehicle large-12 columns"><span>{{vehicle.brand}} - {{vehicle.model}}</span></div>
 				</div>
 			</li>
 		</ul>

@@ -1,18 +1,18 @@
-var fleetCarService = angular.module('fleetCarService', []);
+var fleetVehicleService = angular.module('fleetVehicleService', []);
 
 var wholeData = [];//Array that simulates a database
 
-fleetCarService.factory("carFactory", function(){
+fleetVehicleService.factory("vehicleFactory", function(){
 	return{
 		// Get an old data and update it with user's new value
-		update: function(old_car, new_car){
-			old_car.plate = new_car.plate;
-			old_car.model = new_car.model;
-			old_car.brand = new_car.brand;
-			old_car.color = new_car.color;
-			old_car.fuel = new_car.fuel;
-			old_car.image = new_car.image;
-			return new_car;
+		update: function(old_vehicle, new_vehicle){
+			old_vehicle.plate = new_vehicle.plate;
+			old_vehicle.model = new_vehicle.model;
+			old_vehicle.brand = new_vehicle.brand;
+			old_vehicle.color = new_vehicle.color;
+			old_vehicle.fuel = new_vehicle.fuel;
+			old_vehicle.image = new_vehicle.image;
+			return new_vehicle;
 		},
 		//Set the list of vehicles into the array
 		setArray: function(data){
@@ -24,13 +24,13 @@ fleetCarService.factory("carFactory", function(){
 			return wholeData;
 		},
 		//Add a new vehicle to the array
-		create: function(car){
-			wholeData.push(car);
+		create: function(vehicle){
+			wholeData.push(vehicle);
 			return wholeData;
 		},
 		//delete vehicle to the array
-		delete: function(car){
-			var index = wholeData.indexOf(car);
+		delete: function(vehicle){
+			var index = wholeData.indexOf(vehicle);
 			if (index > -1)
 					wholeData.splice(index, 1);
 			else
