@@ -1,9 +1,8 @@
 var express  = require('express');
 
 var app      = express();
-var port  	 = process.env.PORT || 5000;
 
-app.use(express.static('./Public/CarFleet'));
+app.use(express.static('./Public/VehicleFleet'));
 
-app.listen(port);
+app..listen(process.env.PORT || 5000)
 console.log("App listening on port " + port);
