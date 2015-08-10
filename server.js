@@ -2,7 +2,7 @@ var express  = require('express');
 
 var app      = express();
 var port  	 = process.env.PORT || 5000;
-var port  	 = process.env.ip;
+var ip  	 = process.env.ip;
 
 app.use(express.static('./Public/VehicleFleet'));
 
